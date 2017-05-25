@@ -1,3 +1,9 @@
+# Build things
+dist/
+ocaml-leds
+
+
+## VV From GitHub VV
 *.annot
 *.cmo
 *.cma

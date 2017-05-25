@@ -1,0 +1,9 @@
+name: ocaml-leds
+version: 0.0.1
+obuild-ver: 1
+
+executable ocaml-leds
+  src-dir: src
+  main: main.ml
+  build-deps: obus, lwt, lwt.syntax
+  pp: camlp4o

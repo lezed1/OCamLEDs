@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="razer.device.misc">
+    <method name="getSerial">
+      <arg direction="out" type="s"/>
+    </method>
+    <method name="suspendDevice"/>
+    <method name="getDeviceMode">
+      <arg direction="out" type="s"/>
+    </method>
+    <method name="getRazerUrls">
+      <arg direction="out" type="s"/>
+    </method>
+    <method name="setDeviceMode">
+      <arg name="mode_id" direction="in" type="y"/>
+      <arg name="param" direction="in" type="y"/>
+    </method>
+    <method name="resumeDevice"/>
+    <method name="getVidPid">
+      <arg direction="out" type="ai"/>
+    </method>
+    <method name="getDriverVersion">
+      <arg direction="out" type="s"/>
+    </method>
+    <method name="hasDedicatedMacroKeys">
+      <arg direction="out" type="b"/>
+    </method>
+    <method name="getFirmware">
+      <arg direction="out" type="s"/>
+    </method>
+    <method name="getMatrixDimensions">
+      <arg direction="out" type="ai"/>
+    </method>
+    <method name="hasMatrix">
+      <arg direction="out" type="b"/>
+    </method>
+    <method name="getDeviceName">
+      <arg direction="out" type="s"/>
+    </method>
+    <method name="getDeviceType">
+      <arg direction="out" type="s"/>
+    </method>
+  </interface>
+  <interface name="razer.device.lighting.custom">
+    <method name="setRipple">
+      <arg name="red" direction="in" type="y"/>
+      <arg name="green" direction="in" type="y"/>
+      <arg name="blue" direction="in" type="y"/>
+      <arg name="refresh_rate" direction="in" type="d"/>
+    </method>
+    <method name="setRippleRandomColour">
+      <arg name="refresh_rate" direction="in" type="d"/>
+    </method>
+  </interface>
+  <interface name="razer.device.lighting.chroma">
+    <method name="setWave">
+      <arg name="direction" direction="in" type="i"/>
+    </method>
+    <method name="setStatic">
+      <arg name="red" direction="in" type="y"/>
+      <arg name="green" direction="in" type="y"/>
+      <arg name="blue" direction="in" type="y"/>
+    </method>
+    <method name="setSpectrum"/>
+    <method name="setReactive">
+      <arg name="red" direction="in" type="y"/>
+      <arg name="green" direction="in" type="y"/>
+      <arg name="blue" direction="in" type="y"/>
+      <arg name="speed" direction="in" type="y"/>
+    </method>
+    <method name="setNone"/>
+    <method name="setBreathRandom"/>
+    <method name="setBreathSingle">
+      <arg name="red" direction="in" type="y"/>
+      <arg name="green" direction="in" type="y"/>
+      <arg name="blue" direction="in" type="y"/>
+    </method>
+    <method name="setBreathDual">
+      <arg name="red1" direction="in" type="y"/>
+      <arg name="green1" direction="in" type="y"/>
+      <arg name="blue1" direction="in" type="y"/>
+      <arg name="red2" direction="in" type="y"/>
+      <arg name="green2" direction="in" type="y"/>
+      <arg name="blue2" direction="in" type="y"/>
+    </method>
+    <method name="setCustom"/>
+    <method name="setKeyRow">
+      <arg name="payload" direction="in" type="ay"/>
+    </method>
+  </interface>
+  <interface name="razer.device.lighting.brightness">
+    <method name="getBrightness">
+      <arg direction="out" type="d"/>
+    </method>
+    <method name="setBrightness">
+      <arg name="brightness" direction="in" type="d"/>
+    </method>
+  </interface>
+  <interface name="org.freedesktop.DBus.Introspectable">
+    <method name="Introspect">
+      <arg direction="out" type="s"/>
+    </method>
+  </interface>
+</node>
